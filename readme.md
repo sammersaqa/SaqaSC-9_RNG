@@ -1,24 +1,30 @@
-# 🎲 Random Name Generator
+# Random Name Generator
 
-## Your Name : Sammer Saqa
-
-## Date Revised : November 25, 2025
+## Your Name : Sammer Saqa  
+## Date Revised : November 25, 2025  
 
 - **Last Date Revised:** November 25, 2025  
-  **Exercise Name:** Random Name Generator  
-  **Description:**   Built a themed web application that pulls student and instructor names from a local JSON file. Made it more fun. Calling Students "CSA Superstars" and Instructors "The Authority".
+- **Exercise Name:** Random Name Generator  
+- **Description:**  
+  Built a themed web application that pulls student and instructor names from a local JSON file.  
+  Students are called **"CSA Superstars"** and instructors are called **"The Authority"**.  
+  The app features arcade-inspired styling, responsive design, and interactive name generation.
+
+---
 
 ### What was done :
-  - Created a randomized function triggered by a button click, styled the UI(User Interface) with
-    cool arcade effects, and added mobile/tablet responsiveness. 
+- Created a randomized function triggered by button clicks to display names.  
+- Styled the UI with neon arcade effects, glowing animations, and responsive layouts for mobile/tablet.  
+- Added a **history tracker** that displays the last five names generated.  
+- Set up the basic HTML structure and CSS styling with a wrestling-themed background.  
+- Built a **JSON data file** containing full names with WWE nicknames, emails, and Slack handles.  
+- Integrated **fetch logic** to pull data dynamically from `data.json`.  
+- Implemented **console logging** to show full contact information (name, email, Slack) whenever a name is selected.  
+- Added **color differentiation**:  
+  - CSA Superstars appear in cyan glow.  
+  - The Authority names appear in red glow.  
 
-  - Also included a history tracker that displays the last five names generated. 
-  
-  - Set up basic HTML structure and initial CSS styling. 
-  
-  - Created the JSON data file and tested randomization logic with hardcoded arrays.
-  
-  - Drafted project concept and folder structure. Began integrating fetch logic and DOM manipulation.
+---
 
-## Peer Reviewer : [Name Here]
+## Peer Reviewer : [Name Here]  
 ## Comments : [Insert Comment Here]

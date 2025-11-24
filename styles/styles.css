@@ -74,8 +74,8 @@ body::before {
 .name-display {
   font-size: 1.8rem;
   margin: 1.5rem 0;
-  color: #00fff5; /* cyan glow */
-  text-shadow: 0 0 10px #00fff5, 0 0 20px #00fff5;
+  color: #0b00e1; /* cyan glow */
+  text-shadow: 0 0 10px #4404f4, 0 0 20px #120aeb;
   animation: pulse 1.5s infinite;
   margin-top: 3rem;
 }
@@ -84,7 +84,7 @@ body::before {
 .name-display.authority {
   color: #ff002b; /* red glow */
   text-shadow: 0 0 10px #000000, 0 0 20px #e94560;
-  margin-top: 3rem;
+  margin-top: -.5rem;
 }
 
 @keyframes glow {
@@ -128,7 +128,7 @@ h1 {
   font-size: 1.8rem;
   margin: 1.5rem 0;
   color: #00fff5;
-  text-shadow: 0 0 10px #00fff5, 0 0 20px #00fff5;
+  text-shadow: 0 0 10px #1100ff, 0 0 20px #0015ff;
   animation: pulse 1.5s infinite;
 }
 
@@ -156,8 +156,8 @@ button:hover {
 
 h2 {
   margin-top: 2rem;
-  color: #00fff5;
-  text-shadow: 1px 1px #000;
+  color: #0eb424;
+  text-shadow: 1px 1px #e46161;
   font-size: 1.2rem;
 }
 
