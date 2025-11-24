@@ -6,7 +6,7 @@
 
 - **Last Date Revised:** November 25, 2025  
   **Exercise Name:** Random Name Generator  
-  **Description:**   Built a themed web application that pulls student and instructor names from a local JSON file.
+  **Description:**   Built a themed web application that pulls student and instructor names from a local JSON file. Made it more fun. Calling Students "CSA Superstars" and Instructors "The Authority".
 
 ### What was done :
   - Created a randomized function triggered by a button click, styled the UI(User Interface) with
