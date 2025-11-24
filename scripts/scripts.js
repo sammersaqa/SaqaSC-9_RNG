@@ -18,7 +18,7 @@ function showRandom(group, type) {
   const person = group[Math.floor(Math.random() * group.length)];
 
   // Display fullName
-  fullNameEl.textContent = person.fullName;
+  fullNameEl.innerText = person.fullName;
 
   // Toggle color based on type
   if (type === "instructors") {
@@ -41,7 +41,7 @@ function showRandom(group, type) {
   historyList.innerHTML = "";
   history.forEach(name => {
     const li = document.createElement("li");
-    li.textContent = name;
+    li.innerText = name;
     historyList.appendChild(li);
   });
 }
