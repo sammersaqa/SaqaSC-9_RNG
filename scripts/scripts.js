@@ -1,70 +1,74 @@
-// DOM references
+// Get elements
 let firstName = document.getElementById("firstName");
 let lastName = document.getElementById("lastName");
-let randomStudentBtn = document.getElementById("randomName"); // CSA Superstars button
-let randomAuthorityBtn = document.getElementById("randomAuthority"); // The Authority button
+let studentsBtn = document.getElementById("students");
+let instructorsBtn = document.getElementById("instructors");
 let historyList = document.getElementById("historyList");
-
-// Optional extra fields in HTML
-// <p id="email"></p>
-// <p id="slack"></p>
-let emailEl = document.getElementById("email");
-let slackEl = document.getElementById("slack");
 
 let history = [];
 
-// Fetch data
-function getData() {
-  return fetch("./data/data.json")
-    .then((response) => response.json());
-}
-
-// Randomizer
-function randomizeData(list) {
+// Get random person from list
+function getRandomPerson(list) {
   let randomIndex = Math.floor(Math.random() * list.length);
   console.log("Random index:", randomIndex);
   console.log("Random person:", list[randomIndex]);
   return list[randomIndex];
 }
 
-// Update display
-function updateDisplay(person) {
+// Show name on screen
+function showName(person) {
   firstName.textContent = person.firstName;
   lastName.textContent = person.lastName;
-
-  if (emailEl) emailEl.innerText = `Email: ${person.email}`;
-  if (slackEl) slackEl.innerText = `Slack: ${person.slackName}`;
+  
+  // Log to console
+  console.log("--- Person Details ---");
+  console.log("Name:", person.firstName, person.lastName);
+  console.log("Email:", person.email);
+  console.log("Slack:", person.slackName);
+  console.log("---------------------");
 }
 
-// Update history
-function updateHistory(person, type) {
-  history.unshift({ ...person, type });
+// Add to history list
+function addToHistory(person, type) {
+  history.unshift({ name: `${person.firstName} ${person.lastName} (${type})`, type: type });
   if (history.length > 5) history.pop();
 
   historyList.innerHTML = "";
   history.forEach((entry) => {
     let li = document.createElement("li");
-    li.textContent = `${entry.firstName} ${entry.lastName} (${entry.type})`;
+    li.textContent = entry.name;
+    
+    // Add 'authority' class if it's The Authority
+    if (entry.type === "The Authority") {
+      li.classList.add("authority");
+    }
+    
     historyList.appendChild(li);
   });
 }
 
-// CSA Superstars button
-randomStudentBtn.addEventListener("click", () => {
-  getData().then((data) => {
-    let randomStudent = randomizeData(data.students);
-    updateDisplay(randomStudent);
-    updateHistory(randomStudent, "CSA Superstar");
-  });
+// Students button (CSA Superstars)
+studentsBtn.addEventListener("click", () => {
+  console.log("CSA Superstars button clicked!");
+  fetch("./data/data.json")
+    .then(response => response.json())
+    .then(data => {
+      console.log("Data loaded:", data);
+      let person = getRandomPerson(data.students);
+      showName(person);
+      addToHistory(person, "CSA Superstar");
+    });
 });
 
-// The Authority button
-if (randomAuthorityBtn) {
-  randomAuthorityBtn.addEventListener("click", () => {
-    getData().then((data) => {
-      let randomAuthority = randomizeData(data.instructors);
-      updateDisplay(randomAuthority);
-      updateHistory(randomAuthority, "The Authority");
+// Instructors button (The Authority)
+instructorsBtn.addEventListener("click", () => {
+  console.log("The Authority button clicked!");
+  fetch("./data/data.json")
+    .then(response => response.json())
+    .then(data => {
+      console.log("Data loaded:", data);
+      let person = getRandomPerson(data.instructors);
+      showName(person);
+      addToHistory(person, "The Authority");
     });
-  });
-}
+});
