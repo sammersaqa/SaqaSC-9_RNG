@@ -70,6 +70,23 @@ body::before {
   background: rgba(233, 69, 96, 0.7);
 }
 
+/* Default Superstar color */
+.name-display {
+  font-size: 1.8rem;
+  margin: 1.5rem 0;
+  color: #00fff5; /* cyan glow */
+  text-shadow: 0 0 10px #00fff5, 0 0 20px #00fff5;
+  animation: pulse 1.5s infinite;
+  margin-top: 3rem;
+}
+
+/* Authority mode color */
+.name-display.authority {
+  color: #ff002b; /* red glow */
+  text-shadow: 0 0 10px #000000, 0 0 20px #e94560;
+  margin-top: 3rem;
+}
+
 @keyframes glow {
   from { box-shadow: 0 0 15px rgba(233, 69, 96, 0.5); }
   to { box-shadow: 0 0 35px rgba(233, 69, 96, 1); }
