@@ -145,3 +145,55 @@ h2 {
     font-size: 1rem;
   }
 }
+
+/* Large desktop (1920px) */
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .container {
+    max-width: 70%;
+    padding: 3rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .name-display {
+    font-size: 2.5rem;
+  }
+
+  button {
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+  }
+
+  #historyList li {
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
+}
+
+/* Ultra-wide desktop (2560px and above) */
+@media (min-width: 2560px) {
+  .container {
+    max-width: 60%;
+    padding: 4rem;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  .name-display {
+    font-size: 3rem;
+  }
+
+  button {
+    font-size: 1.5rem;
+    padding: 1.2rem 2.5rem;
+  }
+
+  #historyList li {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+  }
+}
