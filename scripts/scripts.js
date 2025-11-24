@@ -22,6 +22,8 @@ function getData() {
 // Randomizer
 function randomizeData(list) {
   let randomIndex = Math.floor(Math.random() * list.length);
+  console.log("Random index:", randomIndex);
+  console.log("Random person:", list[randomIndex]);
   return list[randomIndex];
 }
 
@@ -30,8 +32,8 @@ function updateDisplay(person) {
   firstName.textContent = person.firstName;
   lastName.textContent = person.lastName;
 
-  if (emailEl) emailEl.textContent = `Email: ${person.email}`;
-  if (slackEl) slackEl.textContent = `Slack: ${person.slackName}`;
+  if (emailEl) emailEl.innerText = `Email: ${person.email}`;
+  if (slackEl) slackEl.innerText = `Slack: ${person.slackName}`;
 }
 
 // Update history
