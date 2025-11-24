@@ -6,7 +6,7 @@ body {
   background-size: cover;
   color: #eaeaea;
   text-align: center;
-  padding: 20rem;
+  padding: 26rem;
   min-height: 50vh;
   display: flex;
   justify-content: center;
@@ -24,6 +24,8 @@ body {
   box-shadow: 0 0 25px rgba(233, 69, 96, 0.7);
   animation: glow 2s infinite alternate;
 }
+
+
 
 @keyframes glow {
   from { box-shadow: 0 0 15px rgba(233, 69, 96, 0.5); }
