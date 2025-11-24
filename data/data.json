@@ -1,0 +1,39 @@
+{
+  "students": [
+    { "firstName": "Vanessa", "lastName": "Acuna", "email": "vanessa.acuna98@gmail.com", "slackName": "Vanessa Acuna" },
+    { "firstName": "James", "lastName": "Blackwell", "email": "BwellJames@gmail.com", "slackName": "James Blackwell" },
+    { "firstName": "Maricella", "lastName": "Calderon", "email": "buitronmarisela@yahoo.com", "slackName": "Maricella Calderon" },
+    { "firstName": "Jacob", "lastName": "Dekok", "email": "Jdekok@sjcoe.net", "slackName": "Jacoozzi the One Winged Angel" },
+    { "firstName": "Kellen", "lastName": "Dixon", "email": "kellendixon2007@gmail.com", "slackName": "Kel" },
+    { "firstName": "Joseph", "lastName": "Durate", "email": "duratemjoseph@gmail.com", "slackName": "Joseph" },
+    { "firstName": "Keante", "lastName": "Epinger", "email": "kepinger23@gmail.com", "slackName": "Keante Epinger" },
+    { "firstName": "Brandon", "lastName": "Estrada", "email": "bestrada8800@gmail.com", "slackName": "Brandon Estrada" },
+    { "firstName": "Isaiah", "lastName": "Ferguson", "email": "Iferguson@sjcoe.net", "slackName": "Isaiah" },
+    { "firstName": "Nicolas", "lastName": "Gonzaba", "email": "nicolasgonzaba1@gmail.com", "slackName": "Nicolas Gonzaba" },
+    { "firstName": "Isaias", "lastName": "Gonzales", "email": "ijgggr@gmail.com", "slackName": "Isaias Gonzalez" },
+    { "firstName": "Eliasaf", "lastName": "Gonzalez", "email": "eliasafgonzalez0@gmail.com", "slackName": "Ya Boy Eli" },
+    { "firstName": "Lucas", "lastName": "Guptill", "email": "fabledparadox@gmail.com", "slackName": "Lucas G" },
+    { "firstName": "Daniel", "lastName": "Herrera", "email": "dherr929@gmail.com", "slackName": "Daniel Herrera" },
+    { "firstName": "Arianna", "lastName": "Huntley", "email": "clair10022004@gmail.com", "slackName": "Arianna Huntley" },
+    { "firstName": "Xavier", "lastName": "Jaques", "email": "xavier.Jaques2442@gmail.com", "slackName": "XavyPlays" },
+    { "firstName": "Florence", "lastName": "Jorden", "email": "fel0325@gmail.com", "slackName": "Florence Jorden" },
+    { "firstName": "Carlos", "lastName": "Lopez", "email": "carlos.lopez5639@gmail.com", "slackName": "Carlos L" },
+    { "firstName": "Bryce", "lastName": "Mack", "email": "Brycewmack50@outlook.com", "slackName": "Bryce Mack" },
+    { "firstName": "Kenneth", "lastName": "Martinez", "email": "Kmartinez@sjcoe.net", "slackName": "Ken Martinez" },
+    { "firstName": "Jose", "lastName": "Martinez", "email": "Jmartinez@sjcoe.net", "slackName": "Jose Martinez" },
+    { "firstName": "Pallavi", "lastName": "Pattanashetti", "email": "pallavi.pattanashetti@gmail.com", "slackName": "Pallavi Pattanasetti" },
+    { "firstName": "Jesus", "lastName": "Ramirez", "email": "angeljesus209@gmail.com", "slackName": "Jesus Ramirez" },
+    { "firstName": "Jonathan", "lastName": "Ramirez", "email": "Shirou277353@icloud.com", "slackName": "Nathan" },
+    { "firstName": "Darcy", "lastName": "Rose", "email": "darcy.ophelia.rose@gmail.com", "slackName": "Darcy" },
+    { "firstName": "Jesus", "lastName": "Salgado", "email": "jesussalgado9040@gmail.com", "slackName": "Jesus Salgado" },
+    { "firstName": "Sammer", "lastName": "Saqa", "email": "sammersaqa@gmail.com", "slackName": "Sammer" },
+    { "firstName": "Gavin", "lastName": "Tristan", "email": "gaqtristan@gmail.com", "slackName": "Gavin" },
+    { "firstName": "Brandon", "lastName": "Van Horn", "email": "bmdvanhorn@icloud.com", "slackName": "Brandon Van Horn" }
+  ],
+  "instructors": [
+    { "firstName": "Ken", "lastName": "Martinez", "email": "Kmartinez@sjcoe.net", "slackName": "Ken Martinez" },
+    { "firstName": "Isaiah", "lastName": "Furgeson", "email": "Iferguson@sjcoe.net", "slackName": "Isaiah" },
+    { "firstName": "Jacob", "lastName": "Dekok", "email": "Jdekok@sjcoe.net", "slackName": "Jacoozzi the One Winged Angel" },
+    { "firstName": "Jose", "lastName": "Martinez", "email": "Jmartinez@sjcoe.net", "slackName": "Jose Martinez" }
+  ]
+}
