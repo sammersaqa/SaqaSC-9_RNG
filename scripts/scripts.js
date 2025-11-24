@@ -1,38 +1,68 @@
+// DOM references
 let firstName = document.getElementById("firstName");
 let lastName = document.getElementById("lastName");
-let randomize = document.getElementById("randomName");
+let randomStudentBtn = document.getElementById("randomName"); // your existing button
+let randomInstructorBtn = document.getElementById("randomInstructor"); // optional second button
 let historyList = document.getElementById("historyList");
+
+// Optional extra fields in HTML
+// <p id="email"></p>
+// <p id="slack"></p>
+let emailEl = document.getElementById("email");
+let slackEl = document.getElementById("slack");
 
 let history = [];
 
+// Fetch data
 function getData() {
   return fetch("./data/data.json")
-    .then((response) => response.json())
-    .then((data) => data.students);
+    .then((response) => response.json());
 }
 
-function randomizeData(students) {
-  let randomIndex = Math.floor(Math.random() * students.length);
-  return students[randomIndex];
+// Randomizer
+function randomizeData(list) {
+  let randomIndex = Math.floor(Math.random() * list.length);
+  return list[randomIndex];
 }
 
-function updateHistory(name) {
-  history.unshift(name); // add to beginning
-  if (history.length > 5) history.pop(); // keep only last 5
+// Update display
+function updateDisplay(person) {
+  firstName.textContent = person.firstName;
+  lastName.textContent = person.lastName;
+
+  if (emailEl) emailEl.textContent = `Email: ${person.email}`;
+  if (slackEl) slackEl.textContent = `Slack: ${person.slackName}`;
+}
+
+// Update history
+function updateHistory(person, type) {
+  history.unshift({ ...person, type });
+  if (history.length > 5) history.pop();
 
   historyList.innerHTML = "";
   history.forEach((entry) => {
     let li = document.createElement("li");
-    li.textContent = `${entry.firstName} ${entry.lastName}`;
+    li.textContent = `${entry.firstName} ${entry.lastName} (${entry.type})`;
     historyList.appendChild(li);
   });
 }
 
-randomize.addEventListener("click", () => {
-  getData().then((students) => {
-    let randomStudent = randomizeData(students);
-    firstName.textContent = randomStudent.firstName;
-    lastName.textContent = randomStudent.lastName;
-    updateHistory(randomStudent);
+// Student button
+randomStudentBtn.addEventListener("click", () => {
+  getData().then((data) => {
+    let randomStudent = randomizeData(data.students);
+    updateDisplay(randomStudent);
+    updateHistory(randomStudent, "Student");
   });
 });
+
+// Instructor button
+if (randomInstructorBtn) {
+  randomInstructorBtn.addEventListener("click", () => {
+    getData().then((data) => {
+      let randomInstructor = randomizeData(data.instructors);
+      updateDisplay(randomInstructor);
+      updateHistory(randomInstructor, "Instructor");
+    });
+  });
+}

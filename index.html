@@ -7,16 +7,26 @@
   <link rel="stylesheet" href="./styles/styles.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>CSA Superstar Roster</h1>
-    <div class="name-display">
-      <span id="firstName"></span> <span id="lastName"></span>
-    </div>
-    <button id="randomName">CSA Superstar "Click Me!"</button>
+  <main>
+    <div class="container">
+      <h1>CSA Superstar Roster</h1>
 
-    <h2> Last 5 Names</h2>
-    <ul id="historyList"></ul>
-  </div>
+      <!-- Display area -->
+      <div class="name-display">
+        <span id="firstName"></span> <span id="lastName"></span>
+      </div>
+      <p id="email"></p>
+      <p id="slack"></p>
+
+      <!-- Buttons -->
+      <button id="randomName">Generate Student</button><br><br>
+      <button id="randomInstructor">Generate Instructor</button>
+
+      <!-- History -->
+      <h2>Last 5 Names</h2>
+      <ul id="historyList"></ul>
+    </div>
+  </main>
 
   <script src="./scripts/scripts.js"></script>
 </body>
