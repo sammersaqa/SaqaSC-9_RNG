@@ -1,8 +1,8 @@
 // DOM references
 let firstName = document.getElementById("firstName");
 let lastName = document.getElementById("lastName");
-let randomStudentBtn = document.getElementById("randomName"); // your existing button
-let randomInstructorBtn = document.getElementById("randomInstructor"); // optional second button
+let randomStudentBtn = document.getElementById("randomName"); // CSA Superstars button
+let randomAuthorityBtn = document.getElementById("randomAuthority"); // The Authority button
 let historyList = document.getElementById("historyList");
 
 // Optional extra fields in HTML
@@ -49,22 +49,22 @@ function updateHistory(person, type) {
   });
 }
 
-// Student button
+// CSA Superstars button
 randomStudentBtn.addEventListener("click", () => {
   getData().then((data) => {
     let randomStudent = randomizeData(data.students);
     updateDisplay(randomStudent);
-    updateHistory(randomStudent, "Student");
+    updateHistory(randomStudent, "CSA Superstar");
   });
 });
 
-// Instructor button
-if (randomInstructorBtn) {
-  randomInstructorBtn.addEventListener("click", () => {
+// The Authority button
+if (randomAuthorityBtn) {
+  randomAuthorityBtn.addEventListener("click", () => {
     getData().then((data) => {
-      let randomInstructor = randomizeData(data.instructors);
-      updateDisplay(randomInstructor);
-      updateHistory(randomInstructor, "Instructor");
+      let randomAuthority = randomizeData(data.instructors);
+      updateDisplay(randomAuthority);
+      updateHistory(randomAuthority, "The Authority");
     });
   });
 }
