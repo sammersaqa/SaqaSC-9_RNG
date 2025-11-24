@@ -9,6 +9,7 @@ fetch("./data/data.json")
   .then(roster => {
     document.getElementById("students").addEventListener("click", () => showRandom(roster.students, "students"));
     document.getElementById("instructors").addEventListener("click", () => showRandom(roster.instructors, "instructors"));
+    document.getElementById("showAll").addEventListener("click", () => showAllContacts(roster));
   })
   .catch(error => console.error("Error loading data.json:", error));
 
@@ -18,7 +19,7 @@ function showRandom(group, type) {
   const person = group[Math.floor(Math.random() * group.length)];
 
   // Display fullName
-  fullNameEl.innerText = person.fullName;
+  fullNameEl.textContent = person.fullName;
 
   // Toggle color based on type
   if (type === "instructors") {
@@ -41,7 +42,22 @@ function showRandom(group, type) {
   historyList.innerHTML = "";
   history.forEach(name => {
     const li = document.createElement("li");
-    li.innerText = name;
+    li.textContent = name;
     historyList.appendChild(li);
+  });
+}
+
+function showAllContacts(roster) {
+  console.clear();
+  console.log("📋 FULL ROSTER CONTACTS");
+
+  console.log("\n--- CSA Superstars ---");
+  roster.students.forEach(person => {
+    console.log(`${person.fullName} | Email: ${person.email} | Slack: ${person.slackName}`);
+  });
+
+  console.log("\n--- The Authority ---");
+  roster.instructors.forEach(person => {
+    console.log(`${person.fullName} | Email: ${person.email} | Slack: ${person.slackName}`);
   });
 }
