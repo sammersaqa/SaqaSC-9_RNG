@@ -1,12 +1,8 @@
-# Random Name Generator
-
-## Your Name : Sammer Saqa  
-## Date Revised : November 25, 2025  
-
-- **Last Date Revised:** November 25, 2025  
-- **Exercise Name:** Random Name Generator  
-- **Description:**  
-  Built a themed web application that pulls student and instructor names from a local JSON file.  
+**Your Name:** Sammer Saqa   
+**Last Date Revised:** November 25, 2025  
+**Exercise Name:** Random Name Generator  
+**Description:**  
+- Built a themed web application that pulls student and instructor names from a local JSON file.  
   Students are called **"CSA Superstars"** and instructors are called **"The Authority"**.  
   The app features arcade-inspired styling, responsive design, and interactive name generation.
 
