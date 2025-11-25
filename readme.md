@@ -25,3 +25,7 @@
 ## Peer Reviewer : Jesus Salgado
 
 **Comments : Very unique style you have here, I do notice that when you aren't in full screen you will see that you have to scroll to make sure you can see the content as well as having to scroll up and down on the actual card you have in the center. Overall it's a good project very well done so far** -- Resolved
+
+
+***Github***
+https://github.com/sammersaqa/SaqaSC-9_RNG.git
