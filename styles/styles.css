@@ -99,6 +99,21 @@ h1 {
   text-shadow: 2px 2px #000;
 }
 
+@font-face {
+  font-family: 'WWE';
+  src: url(/data/images/RawhideRaw2012Regular-v0BM.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'WWE', sans-serif;
+  font-size: 2.5rem;
+  color: #e94560;
+  text-shadow: 2px 2px #000;
+}
+
+
 /* Video Container Styles */
 .video-container {
   margin: 1.5rem 0;
